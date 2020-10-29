@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
       .subscribe((result) => {
         // upload success
         console.log(result);
-        thisfileUploaded = true;
+        this.fileUploaded = true;
       },
         (error) => {
           console.log(error);
