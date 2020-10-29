@@ -1,0 +1,27 @@
+<div class="dashboard">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Dashboard</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h6>Upload Image</h6>
+                <div class="form-group">
+                    <label for="file">Choose File</label>
+                    <input class="form-control" type="file" id="file" (change)="handleFileInput($event.target.files)">
+                </div>
+                <div class="form-group">
+                    <button class="form-control btn btn-secondary" type="button" (click)="uploadFile()">Upload</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="fileUploaded">
+            <div class="col">
+                <h6>Uploaded Images</h6>
+                <img src="{{'https://serene-hollows-11661.herokuapp.com/uploads/' + fileToUpload.name}}" />
+            </div>
+        </div>
+    </div>
+</div>

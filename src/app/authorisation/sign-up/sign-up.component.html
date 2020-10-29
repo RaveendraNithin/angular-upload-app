@@ -1,0 +1,25 @@
+<div class="wrapper d-flex flex-column justify-content-center align-items-center">
+    <div class="card d-inline-flex border border-success p-2 mb-5" *ngIf="toastMessage">
+        {{toastMessage}}
+    </div>
+    <div class="card d-inline-flex border rounded-sm p-3">
+        <h4>Sign Up</h4>
+        <!-- Login Form -->
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input type="email" id="email" class="form-control" name="email" formControlName="email" placeholder="email" />
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" class="form-control" name="password" formControlName="password" placeholder="password" />
+            </div>
+            <div class="form-group">
+                <input type="submit" class="form-control btn btn-primary" value="Sign Up" [disabled]="!signUpForm.valid" />
+            </div>
+        </form>
+
+        <!-- Sign Up link -->
+        <div id="formFooter">
+            <a class="underlineHover" href="javascript:void(0)" routerLink="/authorisation/signin">Already have an account ? Sign in here</a>
+        </div>
+    </div>
+</div>
