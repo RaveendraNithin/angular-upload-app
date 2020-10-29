@@ -13,7 +13,7 @@ export class DashboardService {
   uploadImage(fileToUpload: File) {
     const endpoint = 'https://serene-hollows-11661.herokuapp.com/api/v1/upload';
     const formData: FormData = new FormData();
-    formData.append('fileKey', fileToUpload, fileToUpload.name);
+    formData.append('image', fileToUpload);
     return this.http.post(endpoint, formData);
   }
 

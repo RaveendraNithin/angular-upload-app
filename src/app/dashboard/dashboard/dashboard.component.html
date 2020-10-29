@@ -20,7 +20,9 @@
         <div class="row" *ngIf="fileUploaded">
             <div class="col">
                 <h6>Uploaded Images</h6>
-                <img src="{{'https://serene-hollows-11661.herokuapp.com/uploads/' + fileToUpload.name}}" />
+                <div class="img-file  mt-3">
+                    <img src="{{'https://serene-hollows-11661.herokuapp.com/' + filePath}}" />
+                </div>
             </div>
         </div>
     </div>

@@ -8,7 +8,8 @@ import { DashboardService } from 'src/app/services/dashboard.service';
 })
 export class DashboardComponent implements OnInit {
   fileUploaded: boolean = false;
-  fileToUpload: File = null;
+  fileToUpload: File;
+  filePath: any;
 
   constructor(
     private dashboardService: DashboardService
@@ -21,13 +22,13 @@ export class DashboardComponent implements OnInit {
     this.fileToUpload = files.item(0);
   }
 
-
   uploadFile() {
     this.dashboardService.uploadImage(this.fileToUpload)
       .subscribe((result) => {
         // upload success
         console.log(result);
         this.fileUploaded = true;
+        this.filePath = result['path'];
       },
         (error) => {
           console.log(error);
