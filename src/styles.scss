@@ -10,11 +10,12 @@ body {
     .wrapper {
         width: 100vw;
         height: 100vh;
-        background: url(/assets/background.jpg);
+        background-image: url(/assets/background.jpg);
+        background-color: rgb(175, 222, 212);
     }
     .dashboard {
         width: 100vw;
         height: 100vh;
-        background: rgb(175, 222, 212);
+        background-color: rgb(175, 222, 212);
     }
 }
